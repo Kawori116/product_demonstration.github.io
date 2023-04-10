@@ -1,0 +1,214 @@
+@charset "UTF-8";
+* {
+  font-family: "Open Sans", sans-serif, 微軟正黑體;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  background-color: #E0E0E0;
+}
+
+.rect_btn {
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.container {
+  
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+}
+.container .head {
+  width: 100%;
+  height: 70px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  z-index: 10;
+  background-color: #FFFFFF;
+}
+.container .head .logo {
+  width: auto;
+  height: 50px;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+}
+.content .selection {
+  width: 25%;
+  height: 100%;
+  padding: 20px;
+  background-color: #FFFFFF;
+}
+.content .selection .text {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.content .selection .menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.content .selection .menu .menu_oats {
+  background-image: url("https://rb.gy/hhr2aa");
+}
+.content .selection .menu .menu_oats .oaticon {
+  background-image: url("https://drive.google.com/uc?id=1aMlIuYoqj-wGnoogMIu73p4ftEkS0MBR");
+}
+.content .selection .menu .menu_smoothies {
+  background-image: url("https://rb.gy/kkiaup");
+}
+.content .selection .menu .menu_smoothies .smoothicon {
+  background-image: url("https://drive.google.com/uc?id=1ATX0-AURIPUF2GaHUorg1naeKLi1oFsC");
+}
+.content .selection .menu .menu_salads {
+  background-image: url("https://rb.gy/hmb0hu");
+}
+.content .selection .menu .menu_salads .saladicon {
+  background-image: url("https://drive.google.com/uc?id=1WvlM9GPqodo_Ig5-w9DO9mcONe0hhrhZ");
+}
+.content .selection .menu .menu_healthysnacks {
+  background-image: url("https://rb.gy/bhlxif");
+}
+.content .selection .menu .menu_healthysnacks .snackicon {
+  background-image: url("https://drive.google.com/uc?id=1DrOGO7OBxXOjCK0LMMAsDDdsQFWCUokW");
+}
+.content .selection .menu .icon_wrap {
+  width: auto;
+  height: auto;
+  padding: 8px;
+  border-radius: 50%;
+  border: solid 3px #FFFFFF;
+  z-index: 1;
+  margin-left: 10px;
+}
+.content .selection .menu .icon {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.content .selection .menu h4 {
+  margin-left: 20px;
+  font-size: 23px;
+  color: #FFFFFF;
+  font-weight: 700;
+  z-index: 1;
+}
+.content .selection .menu .menu_oats, .content .selection .menu .menu_smoothies,
+.content .selection .menu .menu_salads, .content .selection .menu .menu_healthysnacks {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin: 10px 0px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  transition: background-size 0.7s ease-in-out;
+}
+.content .selection .menu .menu_oats::before, .content .selection .menu .menu_smoothies::before,
+.content .selection .menu .menu_salads::before, .content .selection .menu .menu_healthysnacks::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #737373;
+  opacity: 0.4;
+  border-radius: 8px;
+}
+.content .selection .menu .menu_oats:hover, .content .selection .menu .menu_smoothies:hover,
+.content .selection .menu .menu_salads:hover, .content .selection .menu .menu_healthysnacks:hover {
+  background-size: 130%;
+}
+.content .selection .menu .menu_oats:hover::before, .content .selection .menu .menu_smoothies:hover::before,
+.content .selection .menu .menu_salads:hover::before, .content .selection .menu .menu_healthysnacks:hover::before {
+  opacity: 0.7;
+}
+.content .selectionview {
+  width: 75%;
+  height: 100%;
+  z-index: 1;
+}
+.content .selectionview #list_item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+  margin: 0px;
+}
+.content .selectionview #list_item li {
+  list-style: none;
+  display: inline-block;
+  background-color: #FFFFFF;
+  padding: 20px 25px;
+  margin: 30px 0px;
+  width: calc((100% - 40px - 20px)/2);
+  border-radius: 8px;
+}
+.content .selectionview #list_item li .top {
+  padding-bottom: 15px;
+}
+.content .selectionview #list_item li .top .recipe_name, .content .selectionview #list_item li .top .recipe_price {
+  display: inline-block;
+  color: #8BC34A;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.content .selectionview #list_item li .top .recipe_price {
+  float: right;
+}
+.content .selectionview #list_item li .mainview {
+  display: flex;
+}
+.content .selectionview #list_item li .mainview .left {
+  margin-left: 10px;
+  margin-right: 25px;
+  width: 230px;
+  height: 200px;
+}
+.content .selectionview #list_item li .mainview .left img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.content .selectionview #list_item li .mainview .right {
+  width: 250px;
+  height: 200px;
+  padding: 0px 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.content .selectionview #list_item li .mainview .right .recipe_ingredient {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 18px;
+  color: #737373;
+}
